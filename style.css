@@ -1,0 +1,656 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    font-family: 'Zilla Slab', serif;
+    font-size: 17px;
+}
+main {
+    padding: 0 20%;
+}
+
+::selection {
+    background-color: #85583b;
+    /*background: #306810;*/
+    color: white;
+}
+a:visited{
+   color: #2678d6;
+}
+p {
+    hyphens: auto;
+    word-spacing: 1px;
+}
+a {
+    transition: font-size 0.3s ease-in-out, color 0.3s ease-in-out;
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    font-size: 18px;
+    color: #2678d6;
+}
+h3 a:hover {
+    font-size: 22px;
+    color: #2678d6;
+    transition: 0.3s ease;
+}
+h1 {
+    margin-top: 5px;
+    color: #000000;
+    margin: 0;
+    font-size: 2em;
+}
+/*hlavicka-----------------------------------------------------------------------*/
+header {
+    position: relative;
+    width: 100%;
+    height: 30em;
+    text-align: center;
+}
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/nepal.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.5s ease-in-out; 
+    transition: 0.5s ease-in-out;
+    z-index: -1; 
+}
+header:hover::before {
+    transform: scale(1.1);
+    filter: contrast(120%)
+}
+
+header:hover #header-title {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 200%;
+} 
+#header-title {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 150%;
+    color: #000000;
+    transition: 0.5s ease-in-out;
+} 
+#header-title span:nth-of-type(2){
+    color: #ffffff;
+} 
+/*menu*/
+#header-menu {
+    position: fixed;  
+    top: 50%; left: 0;
+    transform: translateY(-50%);
+    width: 35px; 
+    height: 35px;
+    background: rgb(255, 255, 255);
+    overflow: hidden;
+    white-space: nowrap;
+    z-index: 1;
+    color: #000000;
+    transition: 0.3s ease-in-out;
+    border-radius: 20%;
+}
+
+#header-menu:hover {
+    width: 110px;
+    height: 145px;
+    background: rgb(255, 255, 255, 0.7);
+    border-radius: 5%;  
+}
+
+#header-menu:hover nav ul li{
+    padding-left: 15px;     
+}
+     
+#header-menu nav ul {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+} 
+     
+#header-menu nav ul li {
+    display: flex;
+    align-items: center;
+    padding-left: 35px; 
+}
+     
+#header-menu nav ul li a {
+    font-size: 20px;
+}
+     
+#header-menu nav ul li a {
+    text-decoration: none;
+    color: #000000;
+}
+     
+#header-menu nav ul li a:hover {
+    color: #2678d6;
+    transition: 0.5s ease;
+}
+#header-menu::before{
+    content: "\f0c9";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: #000000;
+    font-size: 30px;
+    padding: 1px 4px;
+ }
+ #header-menu:hover::before{
+    content: " ";
+    padding: 0;
+ }
+/*konec-menu*/
+/*hlavicka-konec------------------------------------------------------------------*/
+/*omne---------------------------------------------------------------------------*/
+#omne {
+    margin: 10% 0;
+    padding: 5px;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+}
+#omne img {
+    width: 355px;
+    height: auto;
+    border-radius: 2%;
+    float: left;
+    padding-right: 10px;
+}
+
+#omne span {
+    display: block;
+    margin-top: 0.5em;
+    font-size: 1.2em;
+    color: #973218;
+}
+
+.section-content p {
+    line-height: 1.5;
+    padding-right: 5px;
+}
+/*omne-konec--------------------------------------------------------------------------*/
+/*skola-------------------------------------------------------------------------------*/
+#skola {
+    text-align: center;
+    padding: 5px;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+}
+#skola .section-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+#skola .section-item  {
+    padding: 2%;
+    margin: 2%;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+}
+#skola .section-item p {
+    text-align: left;
+    padding: 2%;
+    text-align: justify;
+}
+#skola span{
+    display: block;
+    margin-top: 0.5em;
+    font-size: 1.2em;
+    color: #c09a1f;
+    padding-bottom: 10px;
+}
+#skola .section-content img{
+    width: auto;
+    height: 250px;
+    position: center;
+    border-radius: 2%;
+}
+#skola .section-item:nth-of-type(3) p a{
+    color: #c09a1f;
+}
+#skola .section-item:nth-of-type(3) p a:hover{
+    color: #2678d6;
+    transition: 0.3s ease-in-out;
+}
+#skola a:visited{
+    color: #c09a1f;
+ }
+/*skola-konec-------------------------------------------------------------------------*/
+/*abroad------------------------------------------------------------------------------*/
+#abroad {
+    margin: 10% 0;
+    text-align: center;
+    padding: 5px;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+}
+#abroad span {
+    margin-top: 0.5em;
+    font-size: 1.2em;
+    color: #c42727;
+    padding-bottom: 10px;
+}
+#abroad h3 {
+    font-size: x-large;
+}
+#abroad .section-item  {
+    padding: 40px 20px;
+    position: relative;
+    margin: 2%;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+}
+#abroad .section-item:nth-child(1)  {
+    background-image: url('img/denmark.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#abroad .section-item:nth-child(2)  {
+    background-image: url('img/los-angeles.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#abroad .pokus {
+    max-width: 1000px;
+    padding: 20px;
+    margin: auto;
+    background-color: #ffffffe0;
+}
+#abroad p {
+    text-align: left;
+}
+#abroad .cover {
+    margin: 10px 15px;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+}
+#abroad .cover p {
+    color: #000000;
+    padding: 4%;
+}
+#abroad ul {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#abroad a:visited {
+    color: #c42727;
+}
+/*abroad-konec------------------------------------------------------------------------*/
+/*sport--------------------------------------------------------------------------------*/
+#sport {
+    margin: 10% 0;
+    text-align: center;
+    padding: 5px;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+}
+#sport span {
+    margin-top: 0.5em;
+    font-size: 1.2em;
+    color: #306810;
+    padding-bottom: 10px;
+}
+#sport .section-item  {
+    padding: 2%;
+    position: relative;
+    margin: 2%;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+}
+#sport a{
+    color: #306810;
+}
+#sport a:visited {
+    color: #306810;
+}
+#sport a:hover{
+    color: #2678d6;
+    transition: 0.3s ease-in-out;
+}
+#sport .section-item {
+    text-align: left;
+}
+#sport .section-item:nth-child(1) img {
+    padding-right: 15px;
+    padding-bottom: 2.5px;
+    float: left;
+}
+#sport .section-item:nth-child(2) img {
+    padding-left: 15px;
+    padding-bottom: 2.5px;
+    float: right;
+}
+#sport .section-item h3 {
+    text-align: center;
+}
+#sport .section-item img{
+    height: 232px;
+    width: auto;
+    border-radius: 2%;
+}
+/*sport-konec-------------------------------------------------------------------------*/
+/*konicky-----------------------------------------------------------------------------*/
+#konicky {
+    margin-bottom: 10%;
+    text-align: center;
+    padding: 5px;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+}
+#konicky .section-content {
+    text-align: left;
+}
+#konicky span {
+    margin-top: 0.5em;
+    font-size: 1.2em;
+    color: #002486;
+    padding-bottom: 10px;
+}
+#konicky .section-item  {
+    padding: 2%;
+    position: relative;
+    margin: 2%;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+}
+#konicky h3 {
+    font-size: 1.5em;
+}
+#konicky a:visited {
+    color: #002486;
+}
+#konicky .section-item:nth-child(1) {
+    text-align: left;
+}
+#konicky .sloupecky {
+    padding: 2%;
+    position: relative;
+    margin: 2%;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+}
+#konicky .kultura-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;   
+}
+.sloupecky p {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 1px;
+}
+#konicky .section-item:nth-child(1) .sloupecky {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+#konicky .section-item:nth-child(1) .sloupecky:nth-child(1) {
+    background-image: url('img/MDB.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#konicky .section-item:nth-child(1) .sloupecky:nth-child(2) {
+    background-image: url('img/hvezdarna.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#konicky .section-item:nth-child(1) .sloupecky:nth-child(3) {
+    background-image: url('img/Cinema_City_Olympia.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#konicky .section-item:nth-child(1) .sloupecky:nth-child(4) {
+    background-image: url('img/balet.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#konicky .section-item:nth-child(2) .sloupecky img {
+    padding-right: 15px;
+    width: auto;
+    height: 185px;
+    float: left;
+}
+#konicky .section-item:nth-child(3) .hudba-content {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 1fr; 
+}
+#konicky .section-item:nth-child(4) .priroda-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr; 
+    justify-content: center;
+    gap: 0%;
+}
+#konicky .section-item:nth-child(4) .sloupecky {
+    height: 250px;
+    width: auto;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    transition: /*height 0.3s ease-in-out,*/ border-radius 0.3s ease-in-out;
+}
+#konicky .section-item:nth-child(4) .sloupecky:nth-child(1) {
+    background-image: url('img/rain.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 3%;
+}
+#konicky .section-item:nth-child(4) .sloupecky:nth-child(2) {
+    background-image: url('img/cloud.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 3%;
+}
+#konicky .section-item:nth-child(4) .sloupecky:nth-child(3) {
+    background-image: url('img/louka.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 3%;
+}
+#konicky .section-item:nth-child(4) .sloupecky:nth-child(4) {
+    background-image: url('img/beach.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 3%;
+}
+#konicky .section-item:nth-child(4) .priroda-item p {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    background-color: #ffffff6b;
+}
+#konicky .section-item:nth-child(4) .sloupecky:hover {
+    /*height: 260px;*/
+    border-radius: 0%;
+}
+#konicky .section-item:nth-child(4) .sloupecky:hover p{
+    opacity: 1;
+}
+/*konicky-konec-----------------------------------------------------------------------*/
+/*paticka-----------------------------------------------------------------*/
+#contact {
+    color: #ffffff;
+    background-color: #363636;
+    padding: 5%;
+    margin: 0;
+    line-height: 1.5em;
+}
+#contact h2 {
+    color: #ac6b20;
+}
+#contact a {
+    color: #ac6b20;
+}
+#contact a:hover {
+    color: #2678d6;
+}
+/*paticka-konec-------------------------------------------------------------*/
+/*-------------------------------------------------sipka-------------------------------------------------------*/ 
+#sipka {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #0000002d;
+    border-radius: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+ }
+ 
+ #sipka a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+ }
+ 
+ #sipka i {
+    color: #0000002d;
+    font-size: 20px;
+    transition: color 0.3s ease-in-out;
+ }
+ 
+ #sipka:hover {
+    background: #2678d6;
+ }
+ 
+ #sipka:hover i {
+    color: white;
+ }
+ /*-------------------------------------------------------end of sipka-------------------------------------------------------------------*/
+/*media*/
+@media (max-width: 768px) {
+    header {
+        height: 100vh;
+    }
+    header:hover #header-title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 170%;
+    } 
+    #header-title {
+        font-size: 120%;
+    } 
+    #header-menu {
+        position: fixed;  
+        top: 10%; left: 0;
+        transform: translateY(-50%);
+    }
+    #header-menu:hover {
+        position: fixed;  
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.9); 
+        border-radius: 0;
+        text-align: center;
+    }
+    #header-menu nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #header-menu:hover nav ul li{
+        padding: 5%;     
+    }
+    main {
+        padding: 5px;
+    }
+    #omne {
+        text-align: left;
+        align-items: center;
+    }
+    #omne img {
+        width: 100%;
+        float: none;
+    }
+    #skola .section-content {
+        display: flex;
+        flex-direction: column;
+    }
+    #skola .section-item img {
+        width: 100%;
+        border-radius: 1%;
+    }
+    #skola .section-item p {
+        text-align: left;
+        padding: 2%;
+    }
+    #sport .section-item img{
+        height: auto;
+        width: 100%;
+        border-radius: 2%;
+    }
+    #konicky .kultura-item {
+        display: flex;
+        flex-direction: column;
+    }
+    #konicky .section-item:nth-child(3) .hudba-content {
+        display: flex;
+        flex-direction: column;
+    }
+    #konicky .section-item:nth-child(4) .priroda-item {
+        display: flex;
+        flex-direction: column;
+    }
+    #konicky .section-item:nth-child(4) .sloupecky {
+        height: 150px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1340px) {
+    main {
+        padding: 0 10%;
+    }
+    #omne {
+        text-align: left;
+    }
+
+    #omne img {
+        width: 40%;
+        max-width: 300px;
+    }
+    #skola .section-content {
+        display: flex;
+        flex-direction: column;
+    }
+    #skola .section-item:nth-child(even) img {
+        float: left;
+        padding-right: 10px;
+    }
+    #skola .section-item:nth-child(odd) img {
+        float: right;
+        padding-left: 10px;
+    }
+    #skola .section-item p {
+        text-align: left;
+        padding: 2%;
+    }
+    #konicky .section-item:nth-child(3) .hudba-content {
+        padding-right: 20px;
+    }
+}
