@@ -8,12 +8,13 @@ body {
 main {
     padding: 0 20%;
 }
-
+/*barva pretazeni*/
 ::selection {
     background-color: #85583b;
     /*background: #306810;*/
     color: white;
 }
+/*navstivene odkazy*/
 a:visited{
    color: #2678d6;
 }
@@ -48,7 +49,7 @@ header {
     height: 30em;
     text-align: center;
 }
-header::before {
+header::before {  /*pozadi header*/
     content: "";
     position: absolute;
     top: 0;
@@ -63,19 +64,19 @@ header::before {
     transition: 0.5s ease-in-out;
     z-index: -1; 
 }
-header:hover::before {
+header:hover::before {  /*animace obrazku*/ 
     transform: scale(1.1);
     filter: contrast(120%)
 }
 
-header:hover #header-title {
+header:hover #header-title { /*animace textu*/ 
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 200%;
 } 
-#header-title {
+#header-title {  /*text v header*/
     position: absolute;
     top: 40%;
     left: 50%;
@@ -88,7 +89,7 @@ header:hover #header-title {
     color: #ffffff;
 } 
 /*menu*/
-#header-menu {
+#header-menu { 
     position: fixed;  
     top: 50%; left: 0;
     transform: translateY(-50%);
@@ -103,7 +104,7 @@ header:hover #header-title {
     border-radius: 20%;
 }
 
-#header-menu:hover {
+#header-menu:hover { /*rozsireni menu po najeti*/
     width: 110px;
     height: 145px;
     background: rgb(255, 255, 255, 0.7);
@@ -121,7 +122,7 @@ header:hover #header-title {
     margin: 0;
 } 
      
-#header-menu nav ul li {
+#header-menu nav ul li { 
     display: flex;
     align-items: center;
     padding-left: 35px; 
@@ -136,11 +137,11 @@ header:hover #header-title {
     color: #000000;
 }
      
-#header-menu nav ul li a:hover {
+#header-menu nav ul li a:hover { /*najeti textu v menu*/
     color: #2678d6;
     transition: 0.5s ease;
 }
-#header-menu::before{
+#header-menu::before{ /*ikona*/
     content: "\f0c9";
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
@@ -148,7 +149,7 @@ header:hover #header-title {
     font-size: 30px;
     padding: 1px 4px;
  }
- #header-menu:hover::before{
+ #header-menu:hover::before{ /*ikona po najeti*/
     content: " ";
     padding: 0;
  }
@@ -160,7 +161,7 @@ header:hover #header-title {
     padding: 5px;
     box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
 }
-#omne img {
+#omne img { /*profilovy obrazek*/
     width: 355px;
     height: auto;
     border-radius: 2%;
@@ -186,12 +187,12 @@ header:hover #header-title {
     padding: 5px;
     box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
 }
-#skola .section-content {
+#skola .section-content { /*rozlozeni sekce skoly*/
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
-#skola .section-item  {
+#skola .section-item  { /*ramecek :) */
     padding: 2%;
     margin: 2%;
     box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
@@ -208,20 +209,20 @@ header:hover #header-title {
     color: #c09a1f;
     padding-bottom: 10px;
 }
-#skola .section-content img{
+#skola .section-content img{ /*obrazky skol*/
     width: auto;
     height: 250px;
     position: center;
     border-radius: 2%;
 }
-#skola .section-item:nth-of-type(3) p a{
+#skola .section-item:nth-of-type(3) p a{ /*barva odpovidajici barve sekci*/
     color: #c09a1f;
 }
 #skola .section-item:nth-of-type(3) p a:hover{
     color: #2678d6;
     transition: 0.3s ease-in-out;
 }
-#skola a:visited{
+#skola a:visited{ /*barva odpovidajici barve sekci*/
     color: #c09a1f;
  }
 /*skola-konec-------------------------------------------------------------------------*/
@@ -247,19 +248,19 @@ header:hover #header-title {
     margin: 2%;
     box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
 }
-#abroad .section-item:nth-child(1)  {
+#abroad .section-item:nth-child(1)  { /*bacground obrazek Denmark*/
     background-image: url('img/denmark.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-#abroad .section-item:nth-child(2)  {
+#abroad .section-item:nth-child(2)  { /*bacground obrazek Los Angeles*/
     background-image: url('img/los-angeles.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-#abroad .pokus {
+#abroad .pokus { /*podklad pod textem*/
     max-width: 1000px;
     padding: 20px;
     margin: auto;
@@ -282,7 +283,7 @@ header:hover #header-title {
     padding: 0;
     margin: 0;
 }
-#abroad a:visited {
+#abroad a:visited { /*barva odpovidajici barve sekci*/
     color: #c42727;
 }
 /*abroad-konec------------------------------------------------------------------------*/
@@ -293,7 +294,7 @@ header:hover #header-title {
     padding: 5px;
     box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
 }
-#sport span {
+#sport span { /*barva sekce*/
     margin-top: 0.5em;
     font-size: 1.2em;
     color: #306810;
@@ -305,10 +306,10 @@ header:hover #header-title {
     margin: 2%;
     box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
 }
-#sport a{
+#sport a{ /*barva odpovidajici barve sekci*/
     color: #306810;
 }
-#sport a:visited {
+#sport a:visited { /*barva odpovidajici barve sekci*/
     color: #306810;
 }
 #sport a:hover{
@@ -318,12 +319,12 @@ header:hover #header-title {
 #sport .section-item {
     text-align: left;
 }
-#sport .section-item:nth-child(1) img {
+#sport .section-item:nth-child(1) img { /*kungfu obrazek*/
     padding-right: 15px;
     padding-bottom: 2.5px;
     float: left;
 }
-#sport .section-item:nth-child(2) img {
+#sport .section-item:nth-child(2) img { /*dolomity obrazek*/
     padding-left: 15px;
     padding-bottom: 2.5px;
     float: right;
@@ -331,7 +332,7 @@ header:hover #header-title {
 #sport .section-item h3 {
     text-align: center;
 }
-#sport .section-item img{
+#sport .section-item img{ /* obecne obrazek */
     height: 232px;
     width: auto;
     border-radius: 2%;
@@ -362,7 +363,7 @@ header:hover #header-title {
 #konicky h3 {
     font-size: 1.5em;
 }
-#konicky a:visited {
+#konicky a:visited { /*barva odpovidajici barve sekci*/
     color: #002486;
 }
 #konicky .section-item:nth-child(1) {
@@ -374,7 +375,7 @@ header:hover #header-title {
     margin: 2%;
     box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
 }
-#konicky .kultura-item {
+#konicky .kultura-item { /* rozlozeni kultury */
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;   
@@ -384,42 +385,49 @@ header:hover #header-title {
     padding: 10px;
     border-radius: 1px;
 }
-#konicky .section-item:nth-child(1) .sloupecky {
+#konicky .section-item:nth-child(1) .sloupecky { /*pozice textu v obrazku*/
     display: flex;
     align-items: center; 
     justify-content: center;
 }
-#konicky .section-item:nth-child(1) .sloupecky:nth-child(1) {
+#konicky .section-item:nth-child(1) .sloupecky:nth-child(1) { /*background obrazek */
     background-image: url('img/MDB.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-#konicky .section-item:nth-child(1) .sloupecky:nth-child(2) {
+#konicky .section-item:nth-child(1) .sloupecky:nth-child(2) { /*background obrazek */
     background-image: url('img/hvezdarna.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-#konicky .section-item:nth-child(1) .sloupecky:nth-child(3) {
+#konicky .section-item:nth-child(1) .sloupecky:nth-child(3) { /*background obrazek */
     background-image: url('img/Cinema_City_Olympia.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-#konicky .section-item:nth-child(1) .sloupecky:nth-child(4) {
+#konicky .section-item:nth-child(1) .sloupecky:nth-child(4) { /*background obrazek */
     background-image: url('img/balet.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-#konicky .section-item:nth-child(2) .sloupecky img {
+#konicky .section-item:nth-child(2) .sloupecky img { /*obrazky knih*/
     padding-right: 15px;
     width: auto;
     height: 185px;
     float: left;
 }
-#konicky .section-item:nth-child(3) .hudba-content {
+#konicky .section-item:nth-child(2) .sloupecky {
+    transition: box-shadow 0.3s ease-in-out;
+    box-shadow: none;
+}
+#konicky .section-item:nth-child(2) .sloupecky:hover {
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+}
+#konicky .section-item:nth-child(3) .hudba-content { /*rozlozeni seznamu hudby*/
     display: grid;
     grid-template-columns: 30% 70%;
     grid-template-rows: 1fr; 
@@ -439,35 +447,35 @@ header:hover #header-title {
     justify-content: center;
     transition: /*height 0.3s ease-in-out,*/ border-radius 0.3s ease-in-out;
 }
-#konicky .section-item:nth-child(4) .sloupecky:nth-child(1) {
+#konicky .section-item:nth-child(4) .sloupecky:nth-child(1) { /*background obrazek */
     background-image: url('img/rain.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 3%;
 }
-#konicky .section-item:nth-child(4) .sloupecky:nth-child(2) {
+#konicky .section-item:nth-child(4) .sloupecky:nth-child(2) { /*background obrazek */
     background-image: url('img/cloud.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 3%;
 }
-#konicky .section-item:nth-child(4) .sloupecky:nth-child(3) {
+#konicky .section-item:nth-child(4) .sloupecky:nth-child(3) { /*background obrazek */
     background-image: url('img/louka.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 3%;
 }
-#konicky .section-item:nth-child(4) .sloupecky:nth-child(4) {
+#konicky .section-item:nth-child(4) .sloupecky:nth-child(4) { /*background obrazek */
     background-image: url('img/beach.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 3%;
 }
-#konicky .section-item:nth-child(4) .priroda-item p {
+#konicky .section-item:nth-child(4) .priroda-item p { 
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
     background-color: #ffffff6b;
@@ -476,7 +484,7 @@ header:hover #header-title {
     /*height: 260px;*/
     border-radius: 0%;
 }
-#konicky .section-item:nth-child(4) .sloupecky:hover p{
+#konicky .section-item:nth-child(4) .sloupecky:hover p{ /* zviditelneni textu */
     opacity: 1;
 }
 /*konicky-konec-----------------------------------------------------------------------*/
@@ -488,10 +496,10 @@ header:hover #header-title {
     margin: 0;
     line-height: 1.5em;
 }
-#contact h2 {
+#contact h2 { /*barva k sekci*/
     color: #ac6b20;
 }
-#contact a {
+#contact a { /*barva odpovidajici barve sekci*/
     color: #ac6b20;
 }
 #contact a:hover {
@@ -499,7 +507,7 @@ header:hover #header-title {
 }
 /*paticka-konec-------------------------------------------------------------*/
 /*-------------------------------------------------sipka-------------------------------------------------------*/ 
-#sipka {
+#sipka { /*pozice sipky*/
     position: fixed;
     bottom: 10px;
     right: 20px;
@@ -605,6 +613,21 @@ header:hover #header-title {
         width: 100%;
         border-radius: 2%;
     }
+    #sport .section-item  {
+        padding: 2%;
+        position: relative;
+        margin: 2%;
+        box-shadow: none;
+    }
+    #skola .section-item  { /*bez ramecku asi lepsi*/
+        padding: 2%;
+        margin: 2%;
+        box-shadow: none;
+        transition: box-shadow 0.3s ease-in-out;
+    }
+    #skola .section-item:hover {
+        box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+    }
     #konicky .kultura-item {
         display: flex;
         flex-direction: column;
@@ -649,6 +672,22 @@ header:hover #header-title {
     #skola .section-item p {
         text-align: left;
         padding: 2%;
+    }
+    #skola .section-item { /*bez ramecku asi lepsi*/
+        padding: 2%;
+        margin: 2%;
+        transition: box-shadow 0.3s ease-in-out;
+        box-shadow: none;
+    }
+    #skola .section-item:hover {
+        box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+    }
+    #sport .section-item {
+        transition: box-shadow 0.3s ease-in-out;
+        box-shadow: none;
+    }
+    #sport .section-item:hover {
+        box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
     }
     #konicky .section-item:nth-child(3) .hudba-content {
         padding-right: 20px;
